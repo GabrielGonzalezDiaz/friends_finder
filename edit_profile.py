@@ -25,4 +25,3 @@ class InterestHandler(webapp2.RequestHandler):
     def post(self):
         music = self.request.get("music")
         print music
-        

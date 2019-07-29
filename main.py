@@ -9,6 +9,7 @@ from google.appengine.api import users
 from google.appengine.ext.webapp import template
 
 
+
 def get_user_email():
     user = users.get_current_user()
     if user:
