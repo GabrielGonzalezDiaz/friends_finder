@@ -32,6 +32,10 @@ class MainHandler(webapp2.RequestHandler):
                                     self, "main_page.html", values))
 
 class ProfileTestHandler(webapp2.RequestHandler):
+    def post(self):
+        first_name = self.request.get('first-name')
+        last_name = self.request.get('last-name')
+        interests = {"Games": }
     def get(self):
         values = get_template_parameters()
         self.response.write(renderer.render_template(
