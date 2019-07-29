@@ -1,0 +1,35 @@
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 16pt;
+}
+
+#topmenu {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 20px;
+    text-align: right;
+}
+
+a {
+    text-decoration: underline;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    color:pink;
+}
+
+#topmenu {
+    padding-bottom: 10px;
+}
+
+#successmsg {
+    font-weight: bold;
+    color: blue;
+}
+
+#errormsg {
+    font-weight: bold;
+    color: red;
+}

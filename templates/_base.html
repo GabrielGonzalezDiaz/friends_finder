@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/i/style_isa.css">
+    </head>
+    <body>
+        <div id="topmenu">
+            {% if logout_url %}
+            <a class="box" href="/">Home</a>
+            <a class="box" href="/profile-view">View Profile</a>
+            <a class="box" href="/profile-edit">Edit Profile</a>
+            <a class="box" href="{{logout_url}}">Logout</a>  
+            {% endif %}
+        </div>
+        {% if successmsg %}
+        <div id="successmsg">{{successmsg|linebreaks}}</div>
+        {% endif %}
+        {% if errormsg %}
+        <div id="errormsg">{{errormsg|linebreaks}}</div>
+        {% endif %}
+        {% block content %}{% endblock %}
+    </body>
+</html>

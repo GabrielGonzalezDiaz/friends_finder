@@ -1,4 +1,4 @@
-from socialmodels import UserProfile
+from social_models import UserProfile
 
 
 def save_profile(first_name, last_name, email, password, interests, friends):

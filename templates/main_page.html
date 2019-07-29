@@ -1,4 +1,6 @@
 <html>
+    {% extends "_base.html" %}
+    {% block content %}
      <head>
         <style>
             .window {
@@ -13,8 +15,17 @@
         </style>
     </head>
     <body>
+        {% if login_url %}
+        <h3>Login to see your feed</h3>
+        <a href="{{login_url}}">Login</a><br><br><br>
+        {% endif %}
+        {% if logout_url %}
         <h1><b>Your Feed</b></h1>
         <iframe  class="window" src="/find_friends"></iframe>
         <iframe  class="window" src="/your_friends" align="right"></iframe>
+        <br>
+        {% endif %}
     </body>
+    
+    {% endblock %}
 </html>
