@@ -5,6 +5,14 @@ body {
     text-align: left;
 }
 
+p {
+    text-align: left;
+}
+
+h1 {
+    text-align: left;
+}
+
 #topmenu {
     margin-bottom: 0px;
     color: white;
@@ -23,19 +31,9 @@ a:hover {
 }
 
 hr {
-  border: 0.5px solid #f1f1f1;
+  border: 0.5px solid lightgray;
 }
 
-
-#successmsg {
-    font-weight: bold;
-    color: blue;
-}
-
-#errormsg {
-    font-weight: bold;
-    color: red;
-}
 
 input[type=text] {
   width: 50%;
@@ -49,7 +47,7 @@ input[type=text] {
 #profile {
     margin-top: 50px;
     border:1px solid #ccc;
-    width: 60%;
+    width: 50%;
     background-color: white;
     padding: 16px;
 }
