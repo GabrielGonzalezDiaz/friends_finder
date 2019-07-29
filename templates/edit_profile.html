@@ -1,0 +1,31 @@
+<html>
+    <head>
+         <link rel="stylesheet" href="/i/interest_style.css">
+    </head>
+    
+    <body>
+        <form method="post" action="/profile-save"> Name: <br>
+    <input type="text" name="name" value="{{name}}">
+    <br>
+    <br>
+
+    <legend>Choose your interests:</legend>
+    <form method="post" action="/profile-interest">
+    <div>
+        <input type="checkbox" name="games" value="True">
+        <label for="games"> Games </label>
+    </div>
+    <div>
+        <input type="checkbox" name="sports" value="True">
+        <label for="sports"> Sports </label>
+    </div>
+    <div>
+        <input type="checkbox" name="music" value="True">
+        <label for="music"> Music </label>
+    </div>
+    <br>
+    <button type="submit">Submit </button>
+    </form>       
+
+    </body>       
+</html>

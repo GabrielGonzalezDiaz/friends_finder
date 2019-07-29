@@ -2,17 +2,30 @@ from social_models import UserProfile
 
 
 def save_profile(first_name, last_name, email, password, interests, friends):
-    p = UserProfile(first_name=first_name,
-                    last_name=last_name,
-                    email=email,
-                    password=password,
-                    interests=interests,
-                    friends=friends)
-    # if p:
-    #     p.name = name
-    #     p.description = description
-    # else:
-    #     p = UserProfile(email=email, name=name, description=description)
+    p = get_user_profile(email)
+    if p:
+        p.first_name = first_name
+        p.last_name = last_name
+        p.email = email
+        p.password = password
+        p.interests = interests
+        p.friends = friends
+    else:
+        p = UserProfile(first_name=first_name,
+                        last_name=last_name,
+                        email=email,
+                        password=password,
+                        interests=interests,
+                        friends=friends)
+    p.put()
+
+
+def save_interests(interests, email):
+    p = get_user_profile(email)
+    print(email)
+    print("##################################################3")
+    p.interests = interests
+    print(p)
     p.put()
 
 
