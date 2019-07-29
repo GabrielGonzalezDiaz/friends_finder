@@ -1,31 +1,41 @@
 <html>
+    {% extends "_base.html" %}
+    {% block content %}
     <head>
-         <link rel="stylesheet" href="/i/interest_style.css">
+         <link rel="stylesheet" href="/i/style_isa.css">
     </head>
     
-    <body>
-        <form method="post" action="/profile-save"> Name: <br>
-    <input type="text" name="name" value="{{name}}">
-    <br>
-    <br>
+    <body><center>
+    <div id="profile">
+        <h1>Edit Profile</h1>
 
-    <legend>Choose your interests:</legend>
-    <form method="post" action="/profile-interest">
-    <div>
-        <input type="checkbox" name="games" value="True">
-        <label for="games"> Games </label>
-    </div>
-    <div>
-        <input type="checkbox" name="sports" value="True">
-        <label for="sports"> Sports </label>
-    </div>
-    <div>
-        <input type="checkbox" name="music" value="True">
-        <label for="music"> Music </label>
-    </div>
-    <br>
-    <button type="submit">Submit </button>
-    </form>       
+        <form method="post" action="/profile-save"><b>First Name:  </b><br>
+        <input type="text" placeholder="First Name" name="name" value="{{name}}"><br>
 
-    </body>       
+        <form method="post" action="/profile-save"><b>Last Name:  </b></br>
+        <input type="text" placeholder="Last Name" name="name" value="{{name}}">
+
+        <br><br>
+
+        <legend><b>Choose your interests:</b></legend>
+        <form method="post" action="/profile-interest">
+        <div>
+            <input type="checkbox" name="games" value="True">
+            <label for="games"> Games </label>
+        </div>
+        <div>
+            <input type="checkbox" name="sports" value="True">
+            <label for="sports"> Sports </label>
+        </div>
+        <div>
+            <input type="checkbox" name="music" value="True">
+            <label for="music"> Music </label>
+        </div>
+        <br>
+        <button type="submit">Submit </button>
+        </form>       
+    </div>
+    </center>
+    </body>   
+    {% endblock %}    
 </html>
