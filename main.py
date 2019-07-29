@@ -31,7 +31,13 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write(renderer.render_template(
                                     self, "main_page.html", values))
 
+class ProfileTestHandler(webapp2.RequestHandler):
+    def get(self):
+        values = get_template_parameters()
+        self.response.write(renderer.render_template(
+                                    self, "profile_test.html", values))
 
 app = webapp2.WSGIApplication([
+    ("/profile-test", ProfileTestHandler),
     ('/*', MainHandler),
 ])

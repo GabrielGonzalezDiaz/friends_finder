@@ -1,10 +1,12 @@
 body {
     font-family: Helvetica, sans-serif;
     font-size: 16pt;
+    background-color:  #6d6e9c;
+    text-align: left;
 }
 
 #topmenu {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     color: white;
     font-size: 20px;
     text-align: right;
@@ -20,9 +22,10 @@ a:hover {
     color:pink;
 }
 
-#topmenu {
-    padding-bottom: 10px;
+hr {
+  border: 0.5px solid #f1f1f1;
 }
+
 
 #successmsg {
     font-weight: bold;
@@ -32,4 +35,29 @@ a:hover {
 #errormsg {
     font-weight: bold;
     color: red;
+}
+
+input[type=text] {
+  width: 50%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+form {
+    margin-top: 50px;
+    border:1px solid #ccc;
+    width: 60%;
+    background-color: white;
+    padding: 16px;
+}
+
+label {
+    text-align: left;
+}
+
+#form {
+    text-align: left;
 }

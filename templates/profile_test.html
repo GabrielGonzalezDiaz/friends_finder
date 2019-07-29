@@ -1,0 +1,36 @@
+<html>
+    {% extends "_base.html" %}
+    {% block content %}
+<head>
+    <link rel="stylesheet" href="/i/style_isa.css">
+</head>
+
+<body><center>
+<form id="form" method="post" action="/mainpage">
+    <div class="container">
+      <h1 class="text" >Edit Profile Here</h1>
+      <hr id="main-hr">
+      <label for="first-name"><b >First Name</b></label>
+      <input type="text" placeholder="First Name" name="first_name" required><br>
+
+      <label for="last-name"><b>Last Name</b></label>
+      <input type="text" placeholder="Last Name" name="last_name" required><br>
+      
+      <hr>
+      
+      <label for="interests"><b>Interests</b></label><br>
+      <input type="checkbox" name="interest1" value="Games">Games<br>
+      <input type="checkbox" name="interest2" value="Dancing">Dancing<br>
+      <input type="checkbox" name="interest3" value="Reading">Reading<br>
+
+      <div class="clearfix">
+          <button type="submit" class="signupbtn">Submit</button>
+      </div>
+
+    </div>
+</form>
+</center>
+</body>
+{% endblock %}
+
+</html>
