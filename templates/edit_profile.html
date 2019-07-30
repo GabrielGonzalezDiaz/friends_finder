@@ -18,8 +18,18 @@
         <br><br>
 
         <legend><b>Choose your interests:</b></legend>
+
+
         <form method="post" action="/profile-interest">
-        <div>
+        
+        {% for interest in interest_list %}
+
+            <div>
+                <input type="checkbox" name={{interest}} value="{{interest}}">
+                <label for={{interest}}> {{interest}} </label>
+                </div>
+
+        <!-- <div>
             <input type="checkbox" name="games" value="True">
             <label for="games"> Games </label>
         </div>
@@ -30,11 +40,17 @@
         <div>
             <input type="checkbox" name="music" value="True">
             <label for="music"> Music </label>
-        </div>
+        </div> -->
+        {% endfor %}
         <br>
         <button type="submit">Submit </button>
-        </form>       
+        </form>   
+
+
+
     </div>
+
+
     </center>
     </body>   
     {% endblock %}    

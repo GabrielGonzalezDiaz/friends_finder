@@ -30,9 +30,7 @@ def save_profile(first_name, last_name, email, password, interests, friends):
 
 def save_interests(interests, email):
     p = get_user_profile(email)
-    print(email)
     p.interests = interests
-    print(p)
     p.put()
 
 

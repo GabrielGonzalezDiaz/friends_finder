@@ -1,10 +1,14 @@
-import os
-import webapp2
-import social_data
-import renderer
 
 from google.appengine.api import users
-from google.appengine.ext.webapp import template
+from social_models import UserProfile
+
+
+def get_user_profile(email):
+    q = UserProfile.query(UserProfile.email == email)
+    results = q.fetch(1)
+    for profile in results:
+        return profile
+    return None
 
 
 def get_user_email():

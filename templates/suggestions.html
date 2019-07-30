@@ -1,0 +1,24 @@
+<html>
+
+    <head>
+
+
+    <b> Here are the suggestions that we found for you <b>
+
+        </head>
+
+    
+    <body>
+
+        
+        {% for email in prospect_list %}
+
+        <p>
+            {% get_user_profile(email).first_name %} {% get_user_profile(email).last_name %}
+            </p>
+
+        {% end for %}
+
+        </body>
+
+    </html>

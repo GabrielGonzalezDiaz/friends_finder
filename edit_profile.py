@@ -1,28 +1,20 @@
 import webapp2
 import helper
 import renderer
-from social_models import UserProfile
 
-
-def get_user_profile(email):
-    q = UserProfile.query(UserProfile.email == email)
-    results = q.fetch(1)
-    for profile in results:
-        return profile
-    return None
+interest_list = [
+                'Music',
+                'Sports',
+                'Games',
+                'Academia',
+                'Programming',
+                'Stocks'
+                ]
 
 
 class Handler(webapp2.RequestHandler):
     def get(self):
         values = helper.get_template_parameters()
+        values['interest_list'] = interest_list
         self.response.write(renderer.render_template(
-                                                    self,
-                                                   "edit_profile.html",
-                                                    values)
-                            )
-
-
-class InterestHandler(webapp2.RequestHandler):
-    def post(self):
-        music = self.request.get("music")
-        print music
+                            self, "edit_profile.html", values))
