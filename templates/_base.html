@@ -11,12 +11,6 @@
             <a class="box" href="{{logout_url}}">Logout</a>  
             {% endif %}
         </div>
-        {% if successmsg %}
-        <div id="successmsg">{{successmsg|linebreaks}}</div>
-        {% endif %}
-        {% if errormsg %}
-        <div id="errormsg">{{errormsg|linebreaks}}</div>
-        {% endif %}
         {% block content %}{% endblock %}
     </body>
 </html>
