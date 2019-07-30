@@ -1,4 +1,5 @@
 import webapp2
+import helper
 import renderer
 from social_models import UserProfile
 
@@ -13,7 +14,7 @@ def get_user_profile(email):
 
 class Handler(webapp2.RequestHandler):
     def get(self):
-        values = {}
+        values = helper.get_template_parameters()
         self.response.write(renderer.render_template(
                                                     self,
                                                    "edit_profile.html",
