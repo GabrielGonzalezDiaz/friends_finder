@@ -20,6 +20,8 @@ class Handler(webapp2.RequestHandler):
             p.email = helper.get_user_email()
             p.friends = []
             p.interest = []
+            p.state = self.request.get('state')
+            p.city = self.request.get('city')
 
         for i in range(0, len(interest_list)):
             if(self.request.get(interest_list[i]) and not interest_list[i] in p.interest):
