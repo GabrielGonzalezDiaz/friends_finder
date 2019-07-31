@@ -2,13 +2,13 @@
     <head>
         <link rel="stylesheet" href="/i/style_isa.css">
     </head>
-    <body>
+    <body id="base">
         <div id="topmenu">
             {% if logout_url %}
-            <a class="box" href="/">Home</a>
-            <a class="box" href="/profile-view">View Profile</a>
-            <a class="box" href="/profile-edit">Edit Profile</a>
-            <a class="box" href="{{logout_url}}">Logout</a>  
+            <a class="box" href="/"><b>Home</b></a>
+            <a class="box" href="/profile-view"><b>View Profile</b></a>
+            <a class="box" href="/profile-edit"><b>Edit Profile</b></a>
+            <a class="box" href="{{logout_url}}"><b>Logout</b></a>  
             {% endif %}
         </div>
         {% block content %}{% endblock %}

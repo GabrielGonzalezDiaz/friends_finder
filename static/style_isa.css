@@ -1,8 +1,8 @@
-body {
+#base {
     font-family: Helvetica, sans-serif;
-    font-size: 16pt;
-    background-color:  #6d6e9c;
+    background-color: #c7dfff;
     text-align: left;
+    margin: 0;
 }
 
 p {
@@ -14,20 +14,24 @@ h1 {
 }
 
 #topmenu {
-    margin-bottom: 0px;
-    color: white;
-    font-size: 20px;
-    text-align: right;
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
 }
 
-a {
-    text-decoration: underline;
-    color: white;
-}
-
-a:hover {
+#topmenu a {
+    float: left;
+    text-align: center;
+    width: 25%;
     text-decoration: none;
-    color:pink;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 25px;
+
+}
+#topmenu a:hover {
+    background-color: #000;
 }
 
 hr {
