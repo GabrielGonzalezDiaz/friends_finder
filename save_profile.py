@@ -10,10 +10,9 @@ class Handler(webapp2.RequestHandler):
     def post(self):
 
         p = helper.get_user_profile(helper.get_user_email())
+
         if p:
-            for i in range(0, len(interest_list)):
-                if(self.request.get(interest_list[i])):
-                    p.interest.append(interest_list[i])
+            pass
         else:
             p = UserProfile()
             p.first_name = self.request.get('first_name')
@@ -21,10 +20,10 @@ class Handler(webapp2.RequestHandler):
             p.email = helper.get_user_email()
             p.friends = []
             p.interest = []
-            p.check_box_values = [False]*len(interest_list)
-            for i in range(0, len(interest_list)):
-                if(self.request.get('interest_list[i]')):
-                    p.interest.append(interest_list[i])
+
+        for i in range(0, len(interest_list)):
+            if(self.request.get(interest_list[i]) and not interest_list[i] in p.interest):
+                p.interest.append(interest_list[i])
 
         p.put()
 

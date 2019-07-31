@@ -12,16 +12,16 @@
         <form id="form" method="post" action="/profile-save">
 
             <label for="first-name"><b >First Name</b></label>
-            <input type="text" placeholder="First Name" name="name" value="{{name}}"><br>
+            <input type="text" placeholder="First Name" name="first_name" value="{{name}}"><br>
 
             <label for="last-name"><b>Last Name</b></label>
-            <input type="text" placeholder="Last Name" name="name" value="{{name}}"><br>
+            <input type="text" placeholder="Last Name" name="last_name" value="{{name}}"><br>
 
             <legend><b>Choose your interests:</b></legend>
             {% for interest in interest_list %}
                 <div>
-                    <input type="checkbox" name={{interest}} value="{{interest}}">
-                    <label for={{interest}}> {{interest}} </label>
+                    <input type="checkbox" name={{interest.name}} value={{interest.value}>
+                    <label for={{interest.name}}> {{interest.name}} </label>
                 </div>
             {% endfor %}
             <br>

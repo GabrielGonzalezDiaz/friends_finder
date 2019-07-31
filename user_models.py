@@ -10,7 +10,6 @@ class UserProfile(ndb.Model):
     email = ndb.StringProperty()
     password = ndb.StringProperty()
     interest = ndb.StringProperty(repeated=True)
-    check_box_values = ndb.BooleanProperty(repeated=True)
     friends = ndb.IntegerProperty(repeated=True)
     last_update = ndb.DateTimeProperty(auto_now=True)
 
