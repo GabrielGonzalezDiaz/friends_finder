@@ -1,16 +1,8 @@
 from social_models import UserProfile
-
-
-def get_user_profile(email):
-    q = UserProfile.query(UserProfile.email == email)
-    results = q.fetch(1)
-    for profile in results:
-        return profile
-    return None
-
+import helper
 
 def save_profile(first_name, last_name, email, password, interests, friends):
-    p = get_user_profile(email)
+    p = helper.get_user_profile(email)
     if p:
         p.first_name = first_name
         p.last_name = last_name
@@ -25,12 +17,6 @@ def save_profile(first_name, last_name, email, password, interests, friends):
                         password=password,
                         interests=interests,
                         friends=friends)
-    p.put()
-
-
-def save_interests(interests, email):
-    p = get_user_profile(email)
-    p.interests = interests
     p.put()
 
 

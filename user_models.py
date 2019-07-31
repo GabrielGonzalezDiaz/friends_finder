@@ -1,4 +1,7 @@
 from google.appengine.ext import ndb
+import helper
+
+interest_list = helper.original_interest_list
 
 
 class UserProfile(ndb.Model):
@@ -6,7 +9,8 @@ class UserProfile(ndb.Model):
     last_name = ndb.StringProperty()
     email = ndb.StringProperty()
     password = ndb.StringProperty()
-    interests = ndb.StringProperty(repeated=True)
+    interest = ndb.StringProperty(repeated=True)
+    check_box_values = ndb.BooleanProperty(repeated=True)
     friends = ndb.IntegerProperty(repeated=True)
     last_update = ndb.DateTimeProperty(auto_now=True)
 

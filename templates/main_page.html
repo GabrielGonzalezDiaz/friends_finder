@@ -12,20 +12,20 @@
                 text-align: center;
                 color: white;
             }
-        </style>
-    </head>
+            </style>
+        </head>
     <body>
         {% if login_url %}
-        <h3>Login to see your feed</h3>
-        <a href="{{login_url}}">Login</a><br><br><br>
-        {% endif %}
+            <h3>Login to see your feed</h3>
+            <a href="{{login_url}}">Login</a><br><br><br>
+            {% endif %}
         {% if logout_url %}
-        <h1 id="title"><b>Your Feed</b></h1>
-        <iframe  class="window" src="/find_friends"></iframe>
-        <iframe  class="window" src="/your_friends" align="right"></iframe>
-        <br><br><br><br>
-        {% endif %}
-    </body>
+            <h1 id="title"><b>Your Feed</b></h1>
+            <iframe  class="window" src="/find_friends"></iframe>
+            <iframe  class="window" src="/your_friends" align="right"></iframe>
+            <br><br><br><br>
+            {% endif %}
+        </body>
     
-    {% endblock %}
-</html>
+        {% endblock %}
+    </html>
