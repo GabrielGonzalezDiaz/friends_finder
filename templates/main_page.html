@@ -19,8 +19,8 @@
         
             <form method="get" action='/'>
               <label class="text"><b>Choose an interest</b></label> 
-              <select name='interest_wanted' id='chose_interest'> 
-                <option selected='selected' value="">Choose an interest</option>             
+              <select id="dropbox" name='interest_wanted' id='chose_interest'> 
+                <option selected='selected' value="">  </option>             
                   {% for interest in user_interest %}
                     <option value='{{interest}}'> {{interest}}</option>
                   {% endfor %}

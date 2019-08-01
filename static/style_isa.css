@@ -3,8 +3,6 @@ body {
     color: black;
 }
 
-
-
 #base {
     font-family: Helvetica, sans-serif;
     background-color: black;
@@ -117,4 +115,28 @@ label {
 
 ul {
     margin-top: 2px;
+}
+ button{
+        display: inline-block;
+        padding: 15px 25px;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+}
+
+button:hover {
+                background-color: purple;
+                color: white;
+}
+
+button:active {
+                background-color: #3d033f;
+                color:white;
+                box-shadow: 0 5px rgb(122, 122, 122);
+                transform: translateY(4px);
 }
