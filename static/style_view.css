@@ -1,3 +1,21 @@
-.pic {
-    display: none;
+ul {
+    font-size: 25px;
+}
+
+#images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+img {
+    padding: 5 5 5 5;
+    max-height: 200px;
+
+}
+
+
+#column1 {
+    float: left;
+    width: 35%;
 }

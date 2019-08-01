@@ -5,22 +5,29 @@
 </head>
 <body>
     <div class="profile">
-        <h1 class="text" >Your Profile</h1>
+        <div id="column1">
 
-        <hr align="left">
+            <h1 class="text" >Your Profile</h1>
 
-        <p class="text"><b>Name: </b>{{first_name}} {{last_name}}</p>
+            <hr align="left">
 
-        <label class="text" id="interests"><b>Interests:</b></label>
+            <p class="text"><b>Name: </b>{{first_name}} {{last_name}}</p>
 
-        <ul>
-        {% for interest in interest_list %}
-                <li>{{interest.interest}}</li>
-        {% endfor %}
-        </ul>
-        {% for interest in interest_list %}
-            <img height="200vh" src="{{interest.image}}"></td>
-        {% endfor %}
+            <label class="text" id="interests"><b>Interests:</b></label>
+
+            <ul>
+            {% for interest in interest_list %}
+                    <li>{{interest.interest}}</li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div id="column2">
+            <div id="images">
+                {% for interest in interest_list %}
+                    <img src="{{interest.image}}"></td>
+                {% endfor %}
+            </div>
+        </div>
         
 
         <!--
@@ -51,5 +58,7 @@
         }
         */
     </script>
+        </div>
+
 </body>
 {% endblock %}
