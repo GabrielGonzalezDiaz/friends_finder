@@ -7,29 +7,29 @@
     
     <body>
     <div class="profile">
-        <h1>Edit Profile</h1><hr align="left">
+        <h1 class="text" >Edit Profile</h1><hr align="left">
 
         <form id="form" method="post" action="/profile-save">
 
-            <label for="first_name"><b >First Name</b></label>
-            <input type="text" name="first_name" value={{first_name}}><br>
+            <label class="text" for="first_name"><b >First Name</b></label>
+            <input class="text" type="text" name="first_name" value={{first_name}}><br>
 
-            <label for="last_name"><b>Last Name</b></label>
-            <input type="text" name="last_name" value={{last_name}}><br>
+            <label class="text" for="last_name"><b>Last Name</b></label>
+            <input class="text" type="text" name="last_name" value={{last_name}}><br>
 
-            <legend><b>Choose your interests:</b></legend>
+            <legend class="text" ><b>Choose your interests:</b></legend>
             {% for interest in interest_list %}
-                <div>
+                <div class="text" >
                     <input class="indent" type="checkbox" name={{interest.name}} value={{interest.value}>
                     <label for={{interest.name}}> {{interest.name}} </label>
                 </div>
             {% endfor %}
             <br>
 
-            <label for="city"><b>City</b></label>
-            <input type="text" placeholder="City" name="city" required><br>
+            <label class="text" for="city"><b>City</b></label>
+            <input class="text" type="text" placeholder="City" name="city" required><br>
 
-            <label for="state"><b>State</b></label>
+            <label class="text" for="state"><b>State</b></label>
             <select>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>

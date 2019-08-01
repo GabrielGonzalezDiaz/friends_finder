@@ -1,69 +1,41 @@
 <html>
     {% extends "_base.html" %}
     {% block content %}
-     <head>
-        <style>
-            .window {
-                width: 48%;
-                height: 70%;
-            }
-            body {
-                background-color: #6d6e9c;
-                text-align: center;
-                color: white;
-            }
-
-            #find_title {
-                text-align: center;
-            }
-            #chose_interest {
-                height: 5%;    
-            }
-            </style>
-        </head>
+    <head>
+        <link rel="stylesheet" href="/i/style_main.css">
+    </head>
     <body>
-        {% if login_url %}
-            <h3>Login to see your feed</h3>
-            <a href="{{login_url}}">Login</a><br><br><br>
-            {% endif %}
-        {% if logout_url %}
-            <h1 id="title"><b>Your Feed</b></h1>
+        <div class="main">
+          {% if login_url %}
+            <h3 class="text">Login to see your feed</h3>
+            <a class="text" href="{{login_url}}">Login</a><br><br><br>
+          {% endif %}
+          
+          
+          {% if logout_url %}
 
-
-            <h1> THIS IS WHERE YOU FIND NEW FRIENDS! <h1>
+            <h1 class="text"> Welcome to FriendFinder! <h1>
+            <h2 class="text">Find friends with similar interests! Just select an interest!</h2>
         
-        
-        <form method="get" action='/'>
-
-            <label><b>Chose an interest</b></label>
-            
-            <select name='interest_wanted' id='chose_interest'> 
-                <option selected='selected' value="">Chose an interest</option>             
-                {% for interest in user_interest %}
+            <form method="get" action='/'>
+              <label class="text"><b>Choose an interest</b></label> 
+              <select name='interest_wanted' id='chose_interest'> 
+                <option selected='selected' value="">Choose an interest</option>             
+                  {% for interest in user_interest %}
                     <option value='{{interest}}'> {{interest}}</option>
-                    {% endfor %}
-                </select>
-
-            <button type="submit">Submit</button>
-
+                  {% endfor %}
+                  </select>
+              <button type="submit">Submit</button>
             </form>
 
-
-
             <ul style="list-style: none;">
-
-            {% for prospect in prospects %}
-
+              {% for prospect in prospects %}
                 <li> {{prospect.first_name}} {{prospect.last_name}} {{prospect.email}} </li>
-
-                {% endfor %}
-
-                </ul>
-
-
+              {% endfor %}
+            </ul>
+          
             <br><br>
-            {% endif %}
-
+          {% endif %}
 
         </body>
     

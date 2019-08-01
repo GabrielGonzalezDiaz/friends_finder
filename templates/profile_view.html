@@ -12,20 +12,20 @@
 
         <hr align="left">
 
-        <p><b>Name: </b>{{first_name}} {{last_name}}</p>
+        <p class="text"><b>Name: </b>{{first_name}} {{last_name}}</p>
 
-        <label id="interests"><b>Interests:</b></label>
+        <label class="text" id="interests"><b>Interests:</b></label>
         <ul>
         {% for interest in interest_list %}
 
-        <li class="blt">{{interest}}<br>
+        <li class="text" class="blt">{{interest}}<br>
 
         {% endfor %}
-        </ul>
+        </ul class="text">
 
         <!-- function to print out the elements of the interest list -->
 
-        <p><b>Address: </b>{{city}}, {{state}}</p>
+        <p class="text"><b>Address: </b>{{city}}, {{state}}</p>
     </div>
     
 </form>
