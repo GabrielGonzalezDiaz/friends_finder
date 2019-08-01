@@ -1,6 +1,9 @@
     {% extends "_base.html" %}
     {% block content %}
-
+<head>
+    <link rel="stylesheet" href="/i/style_view.css">
+</head>
+<body>
     <div class="profile">
         <h1 class="text" >Your Profile</h1>
 
@@ -9,18 +12,44 @@
         <p class="text"><b>Name: </b>{{first_name}} {{last_name}}</p>
 
         <label class="text" id="interests"><b>Interests:</b></label>
+
         <ul>
         {% for interest in interest_list %}
-
-        <li class="text" class="blt">{{interest}}<br>
-
+                <li>{{interest.interest}}</li>
         {% endfor %}
-        </ul class="text">
+        </ul>
+        {% for interest in interest_list %}
+            <img height="200vh" src="{{interest.image}}"></td>
+        {% endfor %}
+        
 
-        <!-- function to print out the elements of the interest list -->
+        <!--
+        <table>
+            {% for interest in interest_list %}
+                <tr>
+                    <td>{{interest.interest}}</td>
+                    <td><img height="70vh" src="{{interest.image}}"></td>
+                </tr>
+            {% endfor %}
+        </table>
+                <p class="text"><b>Address: </b>{{city}}, {{state}}</p>
+        -->
 
-        <p class="text"><b>Address: </b>{{city}}, {{state}}</p>
-    </div>
-</form>
-<br><br><br><br><br><br><br>
+    </form>
+    <script>
+        /*
+        integer = Math.round(Math.random()*2);
+        function randomStocks(number){
+            switch (number){
+                case 0: document.getElementById("stocks1").style.display = "inline";
+                break;
+                case 1: document.getElementById("stocks2").style.display = "inline";
+                break;
+                case 2: document.getElementById("stocks3").style.display = "inline";
+                break;
+            }
+        }
+        */
+    </script>
+</body>
 {% endblock %}
