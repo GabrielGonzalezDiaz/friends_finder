@@ -11,5 +11,4 @@ class Handler(webapp2.RequestHandler):
         values['last_name'] = helper.get_user_last_name(email)
         values['interest_list'] = helper.get_user_interest(email)
 
-        self.response.write(renderer.render_template(
-                                    self, "profile_view.html", values))
+        renderer.render_template(self, "profile_view.html", values)

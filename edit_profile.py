@@ -29,5 +29,4 @@ class Handler(webapp2.RequestHandler):
 
             values['interest_list'] = user_interest_state
 
-        self.response.write(renderer.render_template(
-                            self, "edit_profile.html", values))
+        renderer.render_template(self, "edit_profile.html", values)
