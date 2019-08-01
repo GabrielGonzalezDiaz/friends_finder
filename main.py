@@ -6,6 +6,7 @@ import view_profile
 import helper
 import friends_suggestion
 
+
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         values = helper.get_template_parameters()
@@ -17,8 +18,7 @@ class MainHandler(webapp2.RequestHandler):
             values['prospects'] = friends_suggestion.find_suggestions(
                                     self.request.get('interest_wanted'))
 
-            self.response.write(renderer.render_template(
-                                    self, "main_page.html", values))
+            renderer.render_template(self, "main_page.html", values)
         else:
             self.redirect('/profile-edit')
 
