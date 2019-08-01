@@ -11,6 +11,7 @@ class Handler(webapp2.RequestHandler):
         suggestions = friends_suggestion.find_suggestions(
             self.request.get('wanted_interest'))
         values['prospects'] = suggestions
+        values['user_interest'] = helper.original_interest_list
         # emails = suggestions[0]
         # interest_in_common = suggestions[1]
         # first_names = []
