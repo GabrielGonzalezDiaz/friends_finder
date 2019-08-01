@@ -5,7 +5,7 @@ body {
 
 #base {
     font-family: Helvetica, sans-serif;
-    background-color: black;
+    background-color: #c7dfff;
     text-align: left;
     margin: 0;
 }
@@ -33,7 +33,7 @@ h1 {
 
 #topmenu {
     max-width: 100%;
-    background-color: #555;
+    background-color: black;
     overflow: auto;
     margin-top: 0px;
     margin: 0px 70px 0px 70px;
@@ -51,7 +51,7 @@ h1 {
 
 }
 #topmenu a:hover {
-    background-color: purple;
+    background-color: #0c4692;
 }
 
 .pic {
@@ -130,12 +130,12 @@ ul {
 }
 
 button:hover {
-                background-color: purple;
+                background-color: #0c4692;
                 color: white;
 }
 
 button:active {
-                background-color: #3d033f;
+                background-color: #2d048d;
                 color:white;
                 box-shadow: 0 5px rgb(122, 122, 122);
                 transform: translateY(4px);
