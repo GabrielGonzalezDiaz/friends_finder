@@ -1,4 +1,11 @@
-image1{
-    position:static;
-    
+#image1{
+    display: block;
+    margin-left: 800px;
+    margin-top: -550px;
+    position: static;
+    width: 100%;
+    height: auto;
+    max-height: 50vw;
+
 }
+

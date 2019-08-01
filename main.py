@@ -6,7 +6,6 @@ import view_profile
 import helper
 import friends_suggestion
 
-
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         values = helper.get_template_parameters()

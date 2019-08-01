@@ -1,5 +1,6 @@
 from google.appengine.api import users
 from social_models import UserProfile
+import social_data
 
 original_interest_list = [
                 'Music',
