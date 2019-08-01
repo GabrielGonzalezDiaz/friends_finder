@@ -9,3 +9,5 @@ class UserProfile(ndb.Model):
     interests = ndb.StringProperty(repeated=True)
     friends = ndb.IntegerProperty(repeated=True)
     last_update = ndb.DateTimeProperty(auto_now=True)
+    city = ndb.StringProperty()
+    state = ndb.StringProperty()

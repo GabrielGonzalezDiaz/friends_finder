@@ -1,7 +1,7 @@
 from social_models import UserProfile
 import helper
 
-def save_profile(first_name, last_name, email, password, interests, friends):
+def save_profile(first_name, last_name, email, password, interests, friends, city, state):
     p = helper.get_user_profile(email)
     if p:
         p.first_name = first_name
@@ -10,13 +10,13 @@ def save_profile(first_name, last_name, email, password, interests, friends):
         p.password = password
         p.interests = interests
         p.friends = friends
+        p.city = city
+        p.state = state
     else:
-        p = UserProfile(first_name=first_name,
-                        last_name=last_name,
-                        email=email,
-                        password=password,
-                        interests=interests,
-                        friends=friends)
+        p = UserProfile(first_name=first_name, last_name=last_name,
+                        email=email, password=password,
+                        interests=interests, friends=friends, 
+                        city=city, state=state)
     p.put()
 
 
