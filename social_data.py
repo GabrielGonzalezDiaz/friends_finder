@@ -1,6 +1,7 @@
 from social_models import UserProfile
 import helper
 
+
 def save_profile(first_name, last_name, email, password, interests, friends, city, state):
     p = helper.get_user_profile(email)
     if p:

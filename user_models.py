@@ -1,7 +1,4 @@
 from google.appengine.ext import ndb
-import helper
-
-interest_list = helper.original_interest_list
 
 
 class UserProfile(ndb.Model):

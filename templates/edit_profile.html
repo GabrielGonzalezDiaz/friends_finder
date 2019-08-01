@@ -11,11 +11,11 @@
 
         <form id="form" method="post" action="/profile-save">
 
-            <label for="first-name"><b >First Name</b></label>
-            <input type="text" placeholder="First Name" name="first_name" value="{{name}}"><br>
+            <label for="first_name"><b >First Name</b></label>
+            <input type="text" name="first_name" value={{first_name}}><br>
 
-            <label for="last-name"><b>Last Name</b></label>
-            <input type="text" placeholder="Last Name" name="last_name" value="{{name}}"><br>
+            <label for="last_name"><b>Last Name</b></label>
+            <input type="text" name="last_name" value={{last_name}}><br>
 
             <legend><b>Choose your interests:</b></legend>
             {% for interest in interest_list %}

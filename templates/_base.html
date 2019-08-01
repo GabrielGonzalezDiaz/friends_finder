@@ -12,7 +12,10 @@
             <a class="box" href="/"><b>Home</b></a>
             <a class="box" href="/profile-view"><b>View Profile</b></a>
             <a class="box" href="/profile-edit"><b>Edit Profile</b></a>
-            <a class="box" href="{{logout_url}}"><b>Logout</b></a>  
+            <a class="box" href="{{logout_url}}"><b>Logout</b></a>
+            {% endif %}
+            {%if login_url %}
+            <a class="box" href="{{login_url}}"><b>Login</b></a> 
             {% endif %}
         </div>
         {% block content %}{% endblock %}

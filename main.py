@@ -30,7 +30,6 @@ class ErrorHandler(webapp2.RequestHandler):
 
 
 app = webapp2.WSGIApplication([
-    #('/find_friends', find_friends.Handler),
     ('/profile-edit', edit_profile.Handler),
     ('/profile-save', save_profile.Handler),
     ('/profile-view', view_profile.Handler),

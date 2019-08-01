@@ -1,4 +1,3 @@
-from google.appengine.api import users
 from user_models import UserProfile
 import helper
 
@@ -7,7 +6,9 @@ def find_suggestions(user_interest):
     results = []
     for prospect in UserProfile.query():
         email = prospect.email
-        if user_interest in helper.get_user_interest(email) and not (email == helper.get_user_email()):
+        if user_interest in helper.get_user_interest(email) and not (
+                email == helper.get_user_email()):
+
             results.append((
                             helper.get_user_first_name(email),
                             helper.get_user_last_name(email),

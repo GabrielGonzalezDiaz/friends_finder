@@ -1,10 +1,6 @@
 import webapp2
 import helper
 import renderer
-from google.appengine.api import users
-
-
-interest_list = helper.original_interest_list
 
 
 class Handler(webapp2.RequestHandler):
@@ -12,18 +8,19 @@ class Handler(webapp2.RequestHandler):
         values = helper.get_template_parameters()
         email = helper.get_user_email()
         p = helper.get_user_profile(email)
+        interest_list = helper.original_interest_list
+        user_interest_state = []
         if p:
             user_interest = helper.get_user_interest(helper.get_user_email())
-            user_interest_state = []
             for interest in interest_list:
                 user_interest_state.append({
                                             'name': interest,
                                             'value': interest in user_interest
                                             })
-
             values['interest_list'] = user_interest_state
+            values['first_name'] = helper.get_user_first_name(email)
+            values['last_name'] = helper.get_user_last_name(email)
         else:
-            user_interest_state = []
             for interest in interest_list:
                 user_interest_state.append({
                                             'name': interest,
