@@ -26,5 +26,8 @@ body {
     height: 5%;    
 }
 #dropbox{
-    font-size: 40px;
+    font-size: 25px;
+}
+.choose{
+    font-size: 25px
 }
