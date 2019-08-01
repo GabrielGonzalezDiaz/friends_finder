@@ -14,6 +14,10 @@ img {
 
 }
 
+.profile hr {
+  border: 0.5px solid lightgray;
+  width: 70%;
+}
 
 #column1 {
     float: left;

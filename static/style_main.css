@@ -9,8 +9,7 @@ body {
     height: 100%;
     background-color: white;
     padding: 30px;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin: 0 150 0 150;
 }
 .main h1 {
     text-align: center;

@@ -29,7 +29,6 @@ h1 {
     padding-bottom: 10px;
     color: black;
     border:1px solid #ccc;
-    margin: 0 150 0 150;
 }
 
 #topmenu {
@@ -81,7 +80,7 @@ input[type=text] {
     min-width: 100;
     height: 100%;
     background-color: white;
-    padding: 30px;
+    padding: 10px;
     margin-left: 150;
     margin-right: 150;
     text-align: left;
@@ -94,6 +93,10 @@ input[type=text] {
 }
 .profile label {
     font-size: 25px;
+}
+.profile hr {
+  border: 0.5px solid lightgray;
+  width: 50%;
 }
 .blt {
     margin-left: 5px;

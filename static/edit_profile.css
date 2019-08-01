@@ -26,8 +26,20 @@
 }
 
 #button:active {
-                background-color: #3d033f;
-                color:white;
-                box-shadow: 0 5px rgb(122, 122, 122);
-                transform: translateY(4px);
+    background-color: #3d033f;
+    color:white;
+    box-shadow: 0 5px rgb(122, 122, 122);
+    transform: translateY(4px);
+}
+
+.profile hr {
+  border: 0.5px solid lightgray;
+  width: 50%;
+}
+
+img {
+
+  display: block;
+  margin: 50 auto 0 auto;
+  width: 80%;
 }

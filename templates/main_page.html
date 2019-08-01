@@ -29,7 +29,7 @@
             </form>
             <ul style="list-style: none;">
               {% for prospect in prospects %}
-                <li class="text"> {{prospect.first_name}} {{prospect.last_name}} {{prospect.email}} </li>
+                <li class="text"> {{prospect.first_name}} {{prospect.last_name}} <a href="mailto:{{prospect.email}}">{{prospect.email}} </a></li>
               {% endfor %}
             </ul>
           
