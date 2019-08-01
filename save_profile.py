@@ -23,9 +23,9 @@ class Handler(webapp2.RequestHandler):
             p.state = self.request.get('state')
             p.city = self.request.get('city')
 
-        for i in range(0, len(interest_list)):
-            if(self.request.get(interest_list[i]) and not interest_list[i] in p.interest):
-                p.interest.append(interest_list[i])
+        for interest in interest_list:
+            if(self.request.get(interest) and not (interest in p.interest)):
+                p.interest.append(interest)
 
         p.put()
 
