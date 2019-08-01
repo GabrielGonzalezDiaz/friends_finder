@@ -5,9 +5,9 @@
          <link rel="stylesheet" href="/i/style_isa.css">
     </head>
     
-    <body><center>
-    <div id="profile">
-        <h1>Edit Profile</h1><hr>
+    <body>
+    <div class="profile">
+        <h1>Edit Profile</h1><hr align="left">
 
         <form id="form" method="post" action="/profile-save">
 
@@ -20,7 +20,7 @@
             <legend><b>Choose your interests:</b></legend>
             {% for interest in interest_list %}
                 <div>
-                    <input type="checkbox" name={{interest.name}} value={{interest.value}>
+                    <input class="indent" type="checkbox" name={{interest.name}} value={{interest.value}>
                     <label for={{interest.name}}> {{interest.name}} </label>
                 </div>
             {% endfor %}
@@ -83,10 +83,12 @@
                 <option value="WI">Wisconsin</option>
                 <option value="WY">Wyoming</option>
             </select>
-            <button type="submit" style="float: right;">Submit </button>
+            <br>
+            <br>
+            <br>
+            <button type="submit">Submit </button>
         </form>   
     </div>
-    </center>
     </body>   
     {% endblock %}    
 </html>

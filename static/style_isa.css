@@ -9,6 +9,10 @@ body {
     margin: 0;
 }
 
+#base h1 {
+    margin: 0px 70px 0 70px;
+}
+
 p {
     text-align: left;
 }
@@ -23,14 +27,15 @@ h1 {
     background-color: white;
     padding-bottom: 10px;
     color: black;
+        border:1px solid #ccc;
 }
 
 #topmenu {
-    width: 100%;
+    max-width: 100%;
     background-color: #555;
     overflow: auto;
     margin-top: 0px;
-    padding-top: 0px;
+    margin: 0px 70px 0px 70px;
 }
 
 #topmenu a {
@@ -48,28 +53,52 @@ h1 {
     background-color: #000;
 }
 
-hr {
-  border: 0.5px solid lightgray;
+.pic {
+    max-width: 600px;
+    object-fit: right;
+    z-index: 1;
 }
 
 
+
+
 input[type=text] {
-  width: 50%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
+  width: 40%;
+  padding: 15;
+  margin: 5px 0px 22px 0;
   display: inline-block;
   border: none;
   background: #f1f1f1;
 }
 
-#profile {
-    margin-top: 50px;
+.profile {
     border:1px solid #ccc;
-    width: 50%;
+    max-width: 100%;
+    height: 100%;
     background-color: white;
-    padding: 16px;
+    padding: 30px;
+    margin-left: 70px;
+    margin-right: 70px;
     text-align: left;
 }
+.profile legend {
+    font-size: 25px;
+}
+.profile p {
+    font-size: 25px;
+}
+.profile label {
+    font-size: 25px;
+}
+.profile hr {
+  border: 0.5px solid lightgray;
+  width: 50%;
+  margin-right: 70px;
+}
+.blt {
+    margin-left: 5px;
+}
+
 
 #title {
     text-align: center;
