@@ -9,8 +9,8 @@ original_interest_list = [
                 'Books',
                 'Academia',
                 'Programming',
-                'Stocks',
-                'Dapping-up'
+                'Stocks'
+                # 'Dapping-up'
                 ]
 
 

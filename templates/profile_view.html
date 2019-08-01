@@ -1,6 +1,9 @@
     {% extends "_base.html" %}
     {% block content %}
-
+<head>
+    <link rel="stylesheet" href="/i/style_view.css">
+</head>
+<body>
     <div class="profile">
         <h1 class="text" >Your Profile</h1>
 
@@ -9,18 +12,110 @@
         <p class="text"><b>Name: </b>{{first_name}} {{last_name}}</p>
 
         <label class="text" id="interests"><b>Interests:</b></label>
+
         <ul>
         {% for interest in interest_list %}
-
-        <li class="text" class="blt">{{interest}}<br>
-
+                <li>{{interest.interest}}</li>
         {% endfor %}
-        </ul class="text">
+        </ul>
+        {% for interest in interest_list %}
+            <img height="200vh" src="{{interest.image}}"></td>
+        {% endfor %}
+        
 
-        <!-- function to print out the elements of the interest list -->
+        <!--
+        <table>
+            {% for interest in interest_list %}
+                <tr>
+                    <td>{{interest.interest}}</td>
+                    <td><img height="70vh" src="{{interest.image}}"></td>
+                </tr>
+            {% endfor %}
+        </table>
+                <p class="text"><b>Address: </b>{{city}}, {{state}}</p>
+        -->
 
-        <p class="text"><b>Address: </b>{{city}}, {{state}}</p>
-    </div>
-</form>
-<br><br><br><br><br><br><br>
+    </form>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            x = {{interest_list}}
+            console.log(x)
+        }); 
+        function randomMusic(number){
+            switch (number){
+                case 0: document.getElementById("music1").style.display = "inline";
+                break;
+                case 1: document.getElementById("music2").style.display = "inline";
+                break;
+                case 2: document.getElementById("music3").style.display = "inline";
+                break;
+            }
+        }
+        function randomSport(number){
+            switch (number){
+                case 0: document.getElementById("sport1").style.display = "inline";
+                break;
+                case 1: document.getElementById("sport2").style.display = "inline";
+                break;
+                case 2: document.getElementById("sport3").style.display = "inline";
+                break;
+            }
+        }
+        function randomGame(number){
+            switch (number){
+                case 0: document.getElementById("games1").style.display = "inline";
+                break;
+                case 1: document.getElementById("games2").style.display = "inline";
+                break;
+                case 2: document.getElementById("games3").style.display = "inline";
+                break;
+            }
+        }
+        function randomBook(number){
+            switch (number){
+                case 0: document.getElementById("book1").style.display = "inline";
+                break;
+                case 1: document.getElementById("book2").style.display = "inline";
+                break;
+                case 2: document.getElementById("book3").style.display = "inline";
+                break;
+            }
+        }
+        integer = Math.round(Math.random());
+        function randomAcademia(number){
+            switch (number){
+                case 0: document.getElementById("academia1").style.display = "inline";
+                break;
+                case 1: document.getElementById("academia2").style.display = "inline";
+                break;
+            }
+        }
+        integer = Math.round(Math.random()*2);
+        function randomProgramming(number){
+            switch (number){
+                case 0: document.getElementById("programming1").style.display = "inline";
+                break;
+                case 1: document.getElementById("programming2").style.display = "inline";
+                break;
+                case 2: document.getElementById("programming3").style.display = "inline";
+                break;
+            }
+        }
+        integer = Math.round(Math.random()*2);
+        function randomStocks(number){
+            switch (number){
+                case 0: document.getElementById("stocks1").style.display = "inline";
+                break;
+                case 1: document.getElementById("stocks2").style.display = "inline";
+                break;
+                case 2: document.getElementById("stocks3").style.display = "inline";
+                break;
+            }
+        }
+
+        for(int i = 0; i< {{interest_list}}.)
+
+        randomMusic(integer);
+    </script>
+</body>
 {% endblock %}
