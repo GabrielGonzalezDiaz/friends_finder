@@ -2,7 +2,7 @@
     {% extends "_base.html" %}
     {% block content %}
     <head>
-         <link rel="stylesheet" href="/i/style_isa.css">
+         <link rel="stylesheet" href="/i/edit_profile.css">
     </head>
     
     <body>
@@ -16,6 +16,9 @@
 
             <label class="text" for="last_name"><b>Last Name</b></label>
             <input class="text" type="text" name="last_name" value={{last_name}}><br>
+
+            <img id="image1" class="pic" src="../i/images/image1.jpg">
+
 
             <legend class="text" ><b>Choose your interests:</b></legend>
             {% for interest in interest_list %}
