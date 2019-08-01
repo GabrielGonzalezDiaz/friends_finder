@@ -6,19 +6,19 @@
     <link rel="stylesheet" href="/i/style_isa.css">
 </head>
 
-<body><center>
-    <div id="profile">
+<body>
+    <div class="profile">
         <h1 class="text" >Profile</h1>
 
-        <hr>
+        <hr align="left">
 
-        <p><b>Name: </b> {{first_name}} {{last_name}}</b></p>
+        <p><b>Name: </b>{{first_name}} {{last_name}}</p>
 
         <label id="interests"><b>Interests:</b></label>
         <ul>
         {% for interest in interest_list %}
 
-        <li>{{interest}}<br>
+        <li class="blt">{{interest}}<br>
 
         {% endfor %}
         </ul>
@@ -27,8 +27,13 @@
 
         <p><b>Address: </b>{{city}}, {{state}}</p>
     </div>
-</form><br><br><br><br><br><br><br>
-</center>
+    
+</form>
+
+<img id="image1" class="pic" src="../i/images/image1.jpg">
+
+<br><br><br><br><br><br><br>
+
 </body>
 {% endblock %}
 
