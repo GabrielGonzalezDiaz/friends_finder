@@ -5,10 +5,11 @@ original_interest_list = [
                 'Music',
                 'Sports',
                 'Games',
+                'Books',
                 'Academia',
                 'Programming',
                 'Stocks',
-                'Dapping people up',
+                'Dapping-up'
                 ]
 
 

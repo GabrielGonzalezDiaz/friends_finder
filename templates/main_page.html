@@ -16,6 +16,9 @@
             #find_title {
                 text-align: center;
             }
+            #chose_interest {
+                height: 5%;    
+            }
             </style>
         </head>
     <body>
@@ -30,11 +33,11 @@
             <h1> THIS IS WHERE YOU FIND NEW FRIENDS! <h1>
         
         
-        <form id="chose_interest" method="get" action='/'>
+        <form method="get" action='/'>
 
             <label><b>Chose an interest</b></label>
             
-            <select name='interest_wanted'> 
+            <select name='interest_wanted' id='chose_interest'> 
                 <option selected='selected' value="">Chose an interest</option>             
                 {% for interest in user_interest %}
                     <option value='{{interest}}'> {{interest}}</option>
@@ -51,7 +54,7 @@
 
             {% for prospect in prospects %}
 
-                <li>{{prostect.0}} {{prospect.1}} {{prospect.2}}</li>
+                <li> {{prospect.first_name}} {{prospect.last_name}} {{prospect.email}} </li>
 
                 {% endfor %}
 

@@ -8,12 +8,13 @@ def find_suggestions(user_interest):
         email = prospect.email
         if user_interest in helper.get_user_interest(email) and not (
                 email == helper.get_user_email()):
-
-            results.append((
-                            helper.get_user_first_name(email),
-                            helper.get_user_last_name(email),
-                            email
-                            ))
+            t = {
+                'first_name': helper.get_user_first_name(email),
+                'last_name': helper.get_user_last_name(email),
+                'email': email
+                }
+            print t
+            results.append(t)
 
     # for profile in results:
     #     email = profile.email
@@ -22,7 +23,7 @@ def find_suggestions(user_interest):
     #                     email))
 
     if(len(results) < 1):
-        return [("", "", "")]
+        return [("There are", "no", "matches")]
     return results
 
     # suggestions = {}
