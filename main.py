@@ -5,7 +5,6 @@ import save_profile
 import view_profile
 import helper
 import friends_suggestion
-import find_friends
 
 
 class MainHandler(webapp2.RequestHandler):
@@ -17,7 +16,7 @@ class MainHandler(webapp2.RequestHandler):
             values['user_interest'] = helper.get_user_interest(email)
 
             values['prospects'] = friends_suggestion.find_suggestions(
-                                    self.request.get('Music'))
+                                    self.request.get('interest_wanted'))
 
             self.response.write(renderer.render_template(
                                     self, "main_page.html", values))
@@ -31,10 +30,10 @@ class ErrorHandler(webapp2.RequestHandler):
 
 
 app = webapp2.WSGIApplication([
-    ('/find_friends', find_friends.Handler),
+    #('/find_friends', find_friends.Handler),
     ('/profile-edit', edit_profile.Handler),
     ('/profile-save', save_profile.Handler),
     ('/profile-view', view_profile.Handler),
-    # ('/.*', ErrorHandler),
+    #('/.*', ErrorHandler),
     ('/*', MainHandler),
 ])

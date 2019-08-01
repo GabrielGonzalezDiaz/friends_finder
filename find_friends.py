@@ -5,7 +5,7 @@ import friends_suggestion
 
 
 class Handler(webapp2.RequestHandler):
-    def get(self):
+    def post(self):
 
         values = helper.get_template_parameters()
         suggestions = friends_suggestion.find_suggestions(

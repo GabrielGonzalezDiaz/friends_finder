@@ -3,25 +3,7 @@
     <head>
         <h1> THIS IS WHERE YOU FIND NEW FRIENDS! <h1>
         
-        <form>
-
-            <label for="interest"><b>Chose an interest</b></label>
-            <select id='interest_wanted'>
-
-                {% for interest in user_interest %}
-
-                    <option value='{{interest}}'> {{interest}}</option>
-
-                    {% endfor %}
-               
-                </select>
-
-            </form>
-
-        <h1 id="find_title"> THIS IS WHERE YOU FIND NEW FRIENDS! </h1>
         
-
-
         <form id="chose_interest" method="post">
 
             <label for="interest_wanted"><b>Chose an interest</b></label>
@@ -32,13 +14,13 @@
                     {% endfor %}
                 </select>
 
-            <button type="submit">Submit </button>
+            <button type="submit">Submit</button>
 
             </form>
 
 
 
-            <ul>
+            <ul list-style-type="None">
 
             {% for prospect in prospects %}
 
@@ -47,9 +29,6 @@
                 {% endfor %}
 
                 </ul>
-
-
-
 
         </head>
 
