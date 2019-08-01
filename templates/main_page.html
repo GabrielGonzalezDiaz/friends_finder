@@ -12,6 +12,10 @@
                 text-align: center;
                 color: white;
             }
+
+            #find_title {
+                text-align: center;
+            }
             </style>
         </head>
     <body>
@@ -22,9 +26,10 @@
         {% if logout_url %}
             <h1 id="title"><b>Your Feed</b></h1>
             <iframe  class="window" src="/find_friends"></iframe>
-            <iframe  class="window" src="/your_friends" align="right"></iframe>
-            <br><br><br><br>
+            <br><br>
             {% endif %}
+
+
         </body>
     
         {% endblock %}

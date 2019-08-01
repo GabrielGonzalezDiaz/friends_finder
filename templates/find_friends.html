@@ -1,16 +1,55 @@
 <html>
 
     <head>
-
-
         <h1> THIS IS WHERE YOU FIND NEW FRIENDS! <h1>
+        
+        <form>
+
+            <label for="interest"><b>Chose an interest</b></label>
+            <select id='interest_wanted'>
+
+                {% for interest in user_interest %}
+
+                    <option value='{{interest}}'> {{interest}}</option>
+
+                    {% endfor %}
+               
+                </select>
+
+            </form>
+
+         <h1 id="find_title"> THIS IS WHERE YOU FIND NEW FRIENDS! </h1>
+        
+
+        
+        <form id="chose_interest" method="post">
+
+            <label for="interest_wanted"><b>Chose an interest</b></label>
+            
+            <select id='interest_wanted'>              
+                {% for interest in user_interest %}
+                    <option value='{{interest}}'> {{interest}}</option>
+                    {% endfor %}
+                </select>
+
+            <button type="submit">Submit </button>
+
+            </form>
 
 
-        {% for prospect in prospects %}
 
-            {{prospect.0}} {{prospect.1}}<br>
+            <ul>
 
-            {% endfor %}
+            {% for prospect in prospects %}
+
+                <li>{{prostect.0}} {{prospect.1}} {{prospect.2}}</li>
+
+                {% endfor %}
+
+                </ul>
+
+
+
 
         </head>
 

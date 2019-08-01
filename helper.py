@@ -7,7 +7,8 @@ original_interest_list = [
                 'Games',
                 'Academia',
                 'Programming',
-                'Stocks'
+                'Stocks',
+                'Dapping people up',
                 ]
 
 
