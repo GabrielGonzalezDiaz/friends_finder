@@ -1,3 +1,5 @@
+
+
 ul {
     font-size: 25px;
 }
@@ -13,13 +15,40 @@ img {
     max-height: 200px;
 
 }
-
+.profile {
+    border:1px solid #ccc;
+    max-width: 100%;
+    min-width: 100;
+    height: 100%;
+    background-color: white;
+    padding: 30px;
+    margin-left: 150;
+    margin-right: 150;
+    text-align: left;
+}
+.profile legend {
+    font-size: 25px;
+}
+.profile p {
+    font-size: 25px;
+}
+.profile label {
+    font-size: 25px;
+}
 .profile hr {
   border: 0.5px solid lightgray;
-  width: 70%;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.profile h1 {
+    text-align: center;
+    padding-right: 65px;
+    margin-bottom: 10px;
 }
 
 #column1 {
     float: left;
-    width: 35%;
+    width: 30%;
+    padding-right: 20px;
+    
 }
