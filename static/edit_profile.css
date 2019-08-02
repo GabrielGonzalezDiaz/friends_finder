@@ -1,10 +1,10 @@
 #image1{
     display: block;
-    margin-left: 800px;
-    margin-top: -550px;
+    margin-left: 700px;
+    margin-top: -500px;
     position: static;
-    width: 100%;
-    height: auto;
+    width: 70%;
+    height:70%;
     max-height: 50vw;
 }
  #button{

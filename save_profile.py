@@ -22,6 +22,8 @@ class Handler(webapp2.RequestHandler):
         for interest in interest_list:
             if(self.request.get(interest) and not (interest in p.interest)):
                 p.interest.append(interest)
+            if(not self.request.get(interest) and interest in p.interest):
+                p.interest.remove(interest)
 
         p.put()
 
