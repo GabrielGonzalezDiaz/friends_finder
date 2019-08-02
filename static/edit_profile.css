@@ -37,9 +37,17 @@
   width: 50%;
 }
 
-img {
+#image2 {
 
   display: block;
   margin: 50 auto 0 auto;
   width: 80%;
+}
+
+#logo {
+  display: block;
+  margin: 50 auto 0 auto;
+  width: 80%;
+  max-width: 450px;
+
 }
