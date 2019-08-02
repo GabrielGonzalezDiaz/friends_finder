@@ -13,7 +13,7 @@ def find_suggestions(user_interest):
                 'last_name': helper.get_user_last_name(email),
                 'email': email
                 }
-            print t
+            #print t
             results.append(t)
 
     # for profile in results:

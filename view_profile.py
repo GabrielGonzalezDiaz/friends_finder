@@ -12,7 +12,7 @@ class Handler(webapp2.RequestHandler):
         values['last_name'] = helper.get_user_last_name(email)
         values['interest_list'] = list()
         for interest in helper.get_user_interest(email):
-            i = random.randint(1,3)
+            i = random.randint(1, 3)
             values['interest_list'].append({
                 'interest': interest,
                 'image': '/i/images/' + interest.lower() + '/image' + str(i) + '.JPG'

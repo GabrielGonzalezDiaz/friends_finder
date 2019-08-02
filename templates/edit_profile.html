@@ -25,8 +25,13 @@
             <legend class="text" ><b>Choose your interests:</b></legend>
             {% for interest in interest_list %}
                 <div class="text" >
-                    <input class="indent" type="checkbox" name={{interest.name}} value={{interest.value}>
-                    <label for={{interest.name}}> {{interest.name}} </label>
+                    {% if interest.value %}
+                    <input class="indent" type="checkbox" name={{interest.name}} checked>
+                    <label for={{interest.name}}> {{interest.name}}</label>
+                    {% else %}
+                    <input class="indent" type="checkbox" name={{interest.name}}>
+                    <label for={{interest.name}}> {{interest.name}}</label>
+                    {% endif %}
                 </div>
             {% endfor %}
             <br>

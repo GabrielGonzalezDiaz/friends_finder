@@ -17,6 +17,7 @@ class Handler(webapp2.RequestHandler):
                                             'name': interest,
                                             'value': interest in user_interest
                                             })
+            print user_interest_state
             values['interest_list'] = user_interest_state
             values['first_name'] = helper.get_user_first_name(email)
             values['last_name'] = helper.get_user_last_name(email)
